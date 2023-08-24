@@ -1,0 +1,42 @@
+diff --git a/generated/models/EPD_Base.ts b/generated/models/EPD_Base.ts
+index 68dd95a..acc66be 100644
+--- a/generated/models/EPD_Base.ts
++++ b/generated/models/EPD_Base.ts
+@@ -972,7 +972,6 @@ export namespace EPD_Base {
+     COAST_SITKA_SPRUCE = 'Coast Sitka Spruce',
+     COTTONWOOD = 'Cottonwood',
+     DOUGLAS_FIR = 'Douglas Fir',
+-    DOUGLAS_FIR_SOUTH = 'Douglas Fir South',
+     DOUGLAS_FIR_SOUTH = 'Douglas Fir-South',
+     EASTERN_COTTONWOOD = 'Eastern Cottonwood',
+     EASTERN_HEMLOCK = 'Eastern Hemlock',
+diff --git a/generated/services/StandardsService.ts b/generated/services/StandardsService.ts
+index b146847..eb55a51 100644
+--- a/generated/services/StandardsService.ts
++++ b/generated/services/StandardsService.ts
+@@ -3,7 +3,6 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ import type { ClientError } from '../models/ClientError';
+-import type { Standard_Base_properties_short_name } from '../models/Standard_Base_properties_short_name';
+ import type { Standard_Edit } from '../models/Standard_Edit';
+ import type { Standard_Full } from '../models/Standard_Full';
+ import type { Standard_Ref } from '../models/Standard_Ref';
+@@ -75,7 +74,7 @@ export class StandardsService {
+    * @throws ApiError
+    */
+   public getStandardsId(
+-    shortName: Standard_Base_properties_short_name,
++    shortName: string,
+   ): CancelablePromise<Standard_Full | ClientError> {
+     return this.httpRequest.request({
+       method: 'GET',
+@@ -99,7 +98,7 @@ export class StandardsService {
+    * @throws ApiError
+    */
+   public putStandardsId(
+-    shortName: Standard_Base_properties_short_name,
++    shortName: string,
+     requestBody?: Standard_Edit,
+   ): CancelablePromise<Standard_Ref | ClientError> {
+     return this.httpRequest.request({
