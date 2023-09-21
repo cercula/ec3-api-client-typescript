@@ -3,8 +3,6 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Org_Base_properties_name } from './Org_Base_properties_name';
-
 export type Org_Base = {
   /**
    * A web [domain name](https://en.wikipedia.org/wiki/Domain_name) owned by organization.
@@ -19,7 +17,7 @@ export type Org_Base = {
   /**
    * List of other names for organization
    */
-  alt_names?: Array<Org_Base_properties_name>;
+  alt_names?: Array<string>;
   /**
    * Reference to this Org's JSON object
    */

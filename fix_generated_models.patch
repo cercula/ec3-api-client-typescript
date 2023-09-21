@@ -40,3 +40,125 @@ index b146847..eb55a51 100644
      requestBody?: Standard_Edit,
    ): CancelablePromise<Standard_Ref | ClientError> {
      return this.httpRequest.request({
+diff --git a/generated/models/EPD_Ref.ts b/generated/models/EPD_Ref.ts
+index 7ab5da5..e6a0146 100644
+--- a/generated/models/EPD_Ref.ts
++++ b/generated/models/EPD_Ref.ts
+@@ -3,11 +3,7 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ 
+-import type { EPD_Base_properties_id } from './EPD_Base_properties_id';
+-import type { EPD_Base_properties_ref } from './EPD_Base_properties_ref';
+-
+ export type EPD_Ref = {
+-  id: EPD_Base_properties_id;
+-  ref?: EPD_Base_properties_ref;
+-};
+-
++  id: string;
++  ref?: string;
++}
+diff --git a/generated/models/Org_Base.ts b/generated/models/Org_Base.ts
+index 7a6ede1..ad8d25b 100644
+--- a/generated/models/Org_Base.ts
++++ b/generated/models/Org_Base.ts
+@@ -3,8 +3,6 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ 
+-import type { Org_Base_properties_name } from './Org_Base_properties_name';
+-
+ export type Org_Base = {
+   /**
+    * A web [domain name](https://en.wikipedia.org/wiki/Domain_name) owned by organization.
+@@ -19,7 +17,7 @@ export type Org_Base = {
+   /**
+    * List of other names for organization
+    */
+-  alt_names?: Array<Org_Base_properties_name>;
++  alt_names?: Array<string>;
+   /**
+    * Reference to this Org's JSON object
+    */
+diff --git a/generated/models/Org_Ref.ts b/generated/models/Org_Ref.ts
+index 6eaa1da..df7c7e3 100644
+--- a/generated/models/Org_Ref.ts
++++ b/generated/models/Org_Ref.ts
+@@ -3,13 +3,9 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ 
+-import type { Org_Base_properties_name } from './Org_Base_properties_name';
+-import type { Org_Base_properties_ref } from './Org_Base_properties_ref';
+-import type { Org_Base_properties_web_domain } from './Org_Base_properties_web_domain';
+-
+ export type Org_Ref = {
+-  web_domain: Org_Base_properties_web_domain;
+-  readonly name?: Org_Base_properties_name;
+-  ref?: Org_Base_properties_ref;
++  web_domain: string;
++  readonly name?: string;
++  ref?: string;
+ };
+ 
+diff --git a/generated/models/PCR_Ref.ts b/generated/models/PCR_Ref.ts
+index 4885732..5ec57d1 100644
+--- a/generated/models/PCR_Ref.ts
++++ b/generated/models/PCR_Ref.ts
+@@ -3,13 +3,8 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ 
+-import type { PCR_Base_properties_id } from './PCR_Base_properties_id';
+-import type { PCR_Base_properties_name } from './PCR_Base_properties_name';
+-import type { PCR_Base_properties_ref } from './PCR_Base_properties_ref';
+-
+ export type PCR_Ref = {
+-  id: PCR_Base_properties_id;
+-  name?: PCR_Base_properties_name;
+-  ref?: PCR_Base_properties_ref;
+-};
+-
++  id: string;
++  name?: string;
++  ref?: string;
++}
+diff --git a/generated/models/Plant_Ref.ts b/generated/models/Plant_Ref.ts
+index 2911374..6a8a39c 100644
+--- a/generated/models/Plant_Ref.ts
++++ b/generated/models/Plant_Ref.ts
+@@ -3,13 +3,9 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ 
+-import type { Plant_Base_properties_id } from './Plant_Base_properties_id';
+-import type { Plant_Base_properties_name } from './Plant_Base_properties_name';
+-import type { Plant_Base_properties_ref } from './Plant_Base_properties_ref';
+-
+ export type Plant_Ref = {
+-  id: Plant_Base_properties_id;
+-  readonly name?: Plant_Base_properties_name;
+-  ref?: Plant_Base_properties_ref;
++  id: string;
++  readonly name?: string;
++  ref?: string;
+ };
+ 
+diff --git a/generated/models/Standard_Ref.ts b/generated/models/Standard_Ref.ts
+index dd2c9c2..c0fc834 100644
+--- a/generated/models/Standard_Ref.ts
++++ b/generated/models/Standard_Ref.ts
+@@ -3,11 +3,8 @@
+ /* tslint:disable */
+ /* eslint-disable */
+ 
+-import type { Standard_Base_properties_ref } from './Standard_Base_properties_ref';
+-import type { Standard_Base_properties_short_name } from './Standard_Base_properties_short_name';
+-
+ export type Standard_Ref = {
+-  short_name: Standard_Base_properties_short_name;
+-  ref?: Standard_Base_properties_ref;
++  short_name: string;
++  ref?: string;
+ };

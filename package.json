@@ -1,12 +1,21 @@
 {
   "scripts": {
-    "gen": "openapi --input ./openapi.json --output ./generated --client axios --indent 2 --name EC3 && patch < fix_generated_models.patch"
+    "gen": "openapi --input ./openapi.json --output ./generated --client axios --indent 2 --name EC3 && patch < fix_generated_models.patch",
+    "build": "tsc"
   },
   "devDependencies": {
+    "@types/node": "^20.6.3",
     "openapi-typescript-codegen": "^0.25.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "axios": "^1.4.0"
-  }
+  },
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "openapi.json"
+  ]
 }
