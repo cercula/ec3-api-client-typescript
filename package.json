@@ -1,6 +1,6 @@
 {
   "name": "@cercula-io/ec3",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "gen": "openapi --input ./openapi.json --output ./generated --client axios --indent 2 --name EC3 && patch < fix_generated_models.patch",
     "build": "tsc"
