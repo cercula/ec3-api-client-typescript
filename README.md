@@ -7,8 +7,8 @@ This is a programmatically-generated client for the [EC3 public API](https://ope
 For example:
 
 ```ts
-import { EC3 } from '@cercula/ec3'
-import type { EPD_List } from '@cercula/ec3'
+import { EC3 } from '@cercula-io/ec3'
+import type { EPD_List } from '@cercula-io/ec3'
 
 const client = new EC3({
   BASE: 'https://openepd.buildingtransparency.org/api',
