@@ -9,7 +9,7 @@ jobs:
   build-and-publish:
     uses: cercula/shared-actions/.github/workflows/release-package.yaml@main
     secrets:
-      git-access-token: ${{ secrets.NPM_TOKEN }}
+      package-access-token: ${{ secrets.NPM_TOKEN }}
     with:
       package-registry: 'https://registry.npmjs.org'
       build-command: |
